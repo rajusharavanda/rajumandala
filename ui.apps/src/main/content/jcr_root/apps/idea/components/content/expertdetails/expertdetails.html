@@ -1,0 +1,22 @@
+
+<sly data-sly-use.expertInfo="com.aem.idea.core.models.ExpertModel"
+
+<div class="expert">
+  <h1>${expertInfo.heading}</h1>
+
+<div class="expert-landing-img">
+  <img src="${expertInfo.expertImage}" align="left" alt="${expertInfo.expertAlt}" width="100%">
+  </div>
+  <div class="expert-ryt">
+  <h2 class="areas-of-Expertise">${expertInfo.subheading}</h2>
+  <p>${expertInfo.description  @context='html'}</p>
+  <div class="deadline-box">
+  <p> <a href="mailto:xyz@gmail.com"> <img src="${expertInfo.imageicon}"  alt="${expertInfo.mailiconAlt}"></a>On Deadline? Contact Us</p>
+  </div>
+  </div>
+  </div>
+</sly>
+
+   <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.all @ categories='idea.expertdetails-xyz'}" />
+

@@ -1,0 +1,61 @@
+ this is sightly component<br>
+
+    <!----/*   template tag  */----->
+<sly data-sly-use.sighltyObject="/apps/idea/components/content/sightlyComponent/sample.html">
+    <sly data-sly-call="${sighltyObject.tempObject}"></sly>
+
+ </sly><br>
+
+    <!----/*   Set tag  
+    <div data-sly-set.setObject="${properties.alt}">Set tag in HTL</div>
+	 ${setObject}<br> */----->
+    <!----/*   Test tag  */----->
+
+		<sly data-sly-test.testObject="${wcmmode.edit || wcmmode.preview}">
+        <h>The component opened in edit mode</h>
+        </sly>
+    <sly data-sly-test="${!testObject}">
+	<h>The page is opend in desing mode</h>
+    </sly>
+    <!----/*   Clientlib call tag  */----->
+
+   <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+	<sly data-sly-call="${clientlib.all @ categories='Idea_20'}" />
+
+    <!----/*  Text tag  */----->
+
+    <div data-sly-text="${properties.alt}"> TEXT TAG</div>
+
+    <!----/*  Element tag  */----->
+
+  <p data-sly-element="${false ? 'h1' : 'div'}">ELEMENT TAG</p>
+
+      <!----/*  Include tag  */----->
+
+    <sly data-sly-include="/apps/idea/components/content/helloworld/helloworld.html"/>
+	      <!----/*  Resource tag  */----->
+
+		<sly data-sly-resource="${'content' @ resourceType='/apps/idea/components/content/helloworld'}"></sly>
+        	      <!----/*  Unwrap tag  */----->
+
+
+      <p data-sly-unwrap> Hello</p>
+
+        	      <!----/*  List tag  */----->
+
+<div data-sly-repeat.listObject="${currentPage.listChildren}">
+${listObject.name}<br>
+</div>
+
+     	      <!----/*  Repeat tag  */----->
+
+<div data-sly-repeat.listObject="${currentPage.listChildren}">
+${listObject.name}<br>
+</div>
+
+
+     	      <!----/*  Attribut tag  */----->
+
+<div data-sly-attribute.info="Hello"> ATTRIBUTE</div>
+
+
