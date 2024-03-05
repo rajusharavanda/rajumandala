@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Content-Package-Roots: /apps/idea/components/content/rajuTest
+Content-Package-Type: application
+Content-Package-Id: my_packages:rajuTest
+
