@@ -3,7 +3,6 @@ import com.day.cq.dam.api.Rendition;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.whirlpoolcorp.digitalplatform.aem.core.services.AddToPackageCtaService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.LoginException;
